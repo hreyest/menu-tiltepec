@@ -97,8 +97,8 @@ li:hover {
 /* Estilos para las imágenes */
 /* Estilo para imágenes */
 .item-image {
-    width: 220px; /* Aumenta el tamaño para mayor prominencia */
-    height: 120px;
+    width: 290px; /* Aumenta el tamaño para mayor prominencia */
+    height: 160px;
     border-radius: 10px;
     margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
