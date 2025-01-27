@@ -1,14 +1,41 @@
-function showCategory(categoryId) {
-    // Oculta todas las categorías
-    document.querySelectorAll('.category').forEach(category => {
-        category.classList.remove('active');
-    });
+// Función para cargar el menú desde el archivo CSV
+async function loadMenu() {
+    const response = await fetch('menu.csv');
+    const data = await response.text();
+    const rows = data.split('\n').slice(1); // Ignorar la primera fila (encabezados)
 
-    // Muestra la categoría seleccionada
-    document.getElementById(categoryId).classList.add('active');
+    const menuContainer = document.getElementById('menu-container');
+    menuContainer.innerHTML = ''; // Limpiar el contenedor
+
+    rows.forEach(row => {
+        const [categoria, nombre, precio, imagen] = row.split(',');
+        const menuItem = document.createElement('div');
+        menuItem.classList.add('menu-item');
+        menuItem.dataset.categoria = categoria;
+
+        menuItem.innerHTML = `
+            <img src="images/${imagen}" alt="${nombre}">
+            <h3>${nombre}</h3>
+            <p>${precio}</p>
+        `;
+
+        menuContainer.appendChild(menuItem);
+    });
 }
 
-// Mostrar la categoría de entradas por defecto al cargar la página
+// Función para mostrar una categoría específica
+function showCategory(categoria) {
+    const items = document.querySelectorAll('.menu-item');
+    items.forEach(item => {
+        if (item.dataset.categoria === categoria) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Cargar el menú al iniciar la página
 document.addEventListener('DOMContentLoaded', () => {
-    showCategory('entradas');
+    loadMenu();
 });
