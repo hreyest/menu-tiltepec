@@ -11,8 +11,25 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
+	text-align: center;
+    position: sticky;
+    top: 0; /* Fija el encabezado en la parte superior al hacer scroll */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Estilo para el título del menú */
+header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* Contenedor de los botones de navegación */
+nav {
+    margin-top: 15px;
 }
 
+/* Estilo para los botones de navegación */
 nav button {
     background-color: #555;
     color: #fff;
@@ -20,11 +37,18 @@ nav button {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav button:hover {
     background-color: #777;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+nav button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff; /* Resalta el botón enfocado */
 }
 
 main {
@@ -99,7 +123,20 @@ li:hover {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    li {
+     header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+	
+	li {
         flex-direction: column;
         text-align: center;
     }

@@ -10,15 +10,41 @@
     <header>
         <h1>Menú Tiltepec</h1>
         <nav>
-            <button onclick="showCategory('antojitos')">Antojitos</button>
-            <button onclick="showCategory('bebidas')">Bebidas</button>
+            <button onclick="showCategory('desayunos')">Desayunos</button>
+			<button onclick="showCategory('especialidades')">Especialidades</button>
+			<button onclick="showCategory('delmar')">Del Mar</button>
+			<button onclick="showCategory('antojitos')">Antojitos</button>
             <button onclick="showCategory('carnes')">Carnes</button>
 			<button onclick="showCategory('complementos')">Complementos</button>
-        </nav>
+			<button onclick="showCategory('bebidas')">Bebidas</button>
+			        </nav>
     </header>
 
     <main>
-       <section id="antojitos" class="category active" aria-labelledby="antojitos-title">
+       <section id="desayunos" class="category">
+            <h2>Desayunos</h2>
+            <ul>
+				<li><img src="imagenes/chilaquiles.jpg" class="item-image"><span class="item-name">Chilaquiles </span> <span class="item-price">$95.00</span></li>
+				<li><img src="imagenes/chilaquileshuevo.jpg" class="item-image"><span class="item-name">Chilaquiles c/Huevo </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/fajitas.jpg" class="item-image"><span class="item-name">Fajitas </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/huevosgusto.jpg" class="item-image"><span class="item-name">Huevos al gusto </span> <span class="item-price">$85.00</span></li>
+				<li><img src="imagenes/pechugapollo.jpg" class="item-image"><span class="item-name">Pechuga de pollo </span> <span class="item-price">$110.00</span></li>
+            </ul>
+        </section>
+		<section id="especialidades" class="category">
+            <h2>Especialidades</h2>
+            <ul>
+				<li><img src="imagenes/caldodegallina.jpg" class="item-image"><span class="item-name">Caldo de Gallina </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/caldodepnz.jpg" class="item-image"><span class="item-name">Caldo de Pata con Panza </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/aporreadillo.jpg" class="item-image"><span class="item-name">Aporreadillo </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/barbacoares.jpg" class="item-image"><span class="item-name">Barbacoa de res </span> <span class="item-price">$135.00</span></li>
+				<li><img src="imagenes/machaca.jpg" class="item-image"><span class="item-name">Machaca </span> <span class="item-price">$95.00</span></li>
+				<li><img src="imagenes/consomegg.jpg" class="item-image"><span class="item-name">Consomé Gallina </span> <span class="item-price">$70.00</span></li>
+				<li><img src="imagenes/consomepp.jpg" class="item-image"><span class="item-name">Consomé Pata con Panza</span> <span class="item-price">$70.00</span></li>
+				
+            </ul>
+        </section>
+	   <section id="antojitos" class="category active">
         <h2 id="antojitos-title">Antojitos</h2>
         <ul>
 				<li><img src="imagenes/empanadas.jpg" class="item-image"><span class="item-name">Empanadas </span> <span class="item-price">$30.00</span></li>
@@ -66,7 +92,25 @@
 				<li><img src="imagenes/miel.jpg" class="item-image"><span class="item-name">Miel </span> <span class="item-price">$85.00</span></li>
 				<li><img src="imagenes/ordende.jpg" class="item-image"><span class="item-name">Orden de </span> <span class="item-price">$45.00</span></li>
 				<li><img src="imagenes/papasfritas.jpg" class="item-image"><span class="item-name">Papas fritas </span> <span class="item-price">$60.00</span></li>
-				<li><img src="imagenes/platanosfritos.jpg" class="item-image"><span class="item-name">PlaÌtanos fritos </span> <span class="item-price">$60.00</span></li>
+				<li><img src="imagenes/platanosfritos.jpg" class="item-image"><span class="item-name">Plátanos fritos </span> <span class="item-price">$60.00</span></li>
+
+            </ul>
+        </section>
+		<section id="delmar" class="category">
+            <h2>Del Mar</h2>
+            <ul>
+				<li><img src="imagenes/caldodecamaron.jpg" class="item-image"><span class="item-name">Caldo de camarón </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/caldodrobalo.jpg" class="item-image"><span class="item-name">Caldo de robalo </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/camarones.jpg" class="item-image"><span class="item-name">Camarones </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/coctel.jpg" class="item-image"><span class="item-name">Coctel </span> <span class="item-price">$85.00</span></li>
+				<li><img src="imagenes/empanadascamaron.jpg" class="item-image"><span class="item-name">Empanadas de camaron </span> <span class="item-price">$40.00</span></li>
+				<li><img src="imagenes/ensaladamariscos.jpg" class="item-image"><span class="item-name">Ensalada Mariscos </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/filetederobalo.jpg" class="item-image"><span class="item-name">Filete de robalo </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/mojarra.jpg" class="item-image"><span class="item-name">Mojarra </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/tiritasdezihuatanejo.jpg" class="item-image"><span class="item-name">Tiritas de Zihuatanejo </span> <span class="item-price">$155.00</span></li>
+
+
+
             </ul>
         </section>
     </main>
