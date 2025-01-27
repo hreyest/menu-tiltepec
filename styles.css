@@ -27,40 +27,84 @@ nav button:hover {
     background-color: #777;
 }
 
-#menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+main {
     padding: 20px;
 }
 
-.menu-item {
+.category {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.category.active {
+    opacity: 1;
+    display: block;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
     background-color: #fff;
-    margin: 10px;
+    margin: 10px auto;
     padding: 15px;
+    width: 80%;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-item:hover {
-    transform: scale(1.05);
+li:hover {
+    transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.menu-item img {
-    width: 100%;
+/* Estilos para las imágenes */
+/* Estilo para imágenes */
+.item-image {
+    width: 220px; /* Aumenta el tamaño para mayor prominencia */
+    height: 120px;
     border-radius: 10px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
-.menu-item h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
+/* Estilos para el nombre del artículo */
+.item-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center; /* Centra el texto */
 }
 
-.menu-item p {
-    margin: 0;
-    color: #555;
+/* Estilos para el precio del artículo */
+.item-price {
+	font-weight: bold;
+    font-size: 20px;
+    color: #444;
+    font-style: italic;
+    text-align: center; /* Centra el texto */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-image {
+        margin-bottom: 10px;
+    }
 }

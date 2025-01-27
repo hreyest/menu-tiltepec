@@ -3,22 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Restaurante</title>
+    <title>Menú Tiltepec</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Menú del Restaurante</h1>
+        <h1>Menú Tiltepec</h1>
         <nav>
-            <button onclick="showCategory('Entradas')">Entradas</button>
-            <button onclick="showCategory('Platos Principales')">Platos Principales</button>
-            <button onclick="showCategory('Postres')">Postres</button>
+            <button onclick="showCategory('antojitos')">Antojitos</button>
+            <button onclick="showCategory('bebidas')">Bebidas</button>
+            <button onclick="showCategory('carnes')">Carnes</button>
+			<button onclick="showCategory('complementos')">Complementos</button>
         </nav>
     </header>
 
     <main>
-        <section id="menu-container">
-            <!-- Los platillos se cargarán aquí dinámicamente -->
+       <section id="antojitos" class="category active" aria-labelledby="antojitos-title">
+        <h2 id="antojitos-title">Antojitos</h2>
+        <ul>
+				<li><img src="imagenes/empanadas.jpg" class="item-image"><span class="item-name">Empanadas </span> <span class="item-price">$30.00</span></li>
+				<li><img src="imagenes/picaditas.jpg" class="item-image"><span class="item-name">Picaditas </span> <span class="item-price">$35.00</span></li>
+				<li><img src="imagenes/quesadillas.jpg" class="item-image"><span class="item-name">Quesadillas </span> <span class="item-price">$35.00</span></li>
+				<li><img src="imagenes/sincronizadas.jpg" class="item-image"><span class="item-name">Sincronizadas </span> <span class="item-price">$90.00</span></li>
+				<li><img src="imagenes/tacosdorados.jpg" class="item-image"><span class="item-name">Tacos dorados de pollo </span> <span class="item-price">$80.00</span></li>
+				<li><img src="imagenes/tlayuda.jpg" class="item-image"><span class="item-name">Tlayuda </span> <span class="item-price">$100.00</span></li>
+				<li><img src="imagenes/tortas.jpg" class="item-image"><span class="item-name">Tortas </span> <span class="item-price">$70.00</span></li>
+        </ul>
+    </section>
+
+        <section id="bebidas" class="category">
+            <h2>Bebidas</h2>
+            <ul>
+                <li><img src="imagenes/agua.jpg" class="item-image"><span class="item-name">Agua </span> <span class="item-price">$25.00</span></li>
+				<li><img src="imagenes/aguafresca.jpg" class="item-image"><span class="item-name">Agua fresca </span> <span class="item-price">$40.00</span></li>
+				<li><img src="imagenes/cerveza.jpg" class="item-image"><span class="item-name">Cerveza </span> <span class="item-price">$22.00</span></li>
+				<li><img src="imagenes/jugodelvalle.jpg" class="item-image"><span class="item-name">Jugo DelValle </span> <span class="item-price">$25.00</span></li>
+				<li><img src="imagenes/licuados.jpg" class="item-image"><span class="item-name">Licuados </span> <span class="item-price">$50.00</span></li>
+				<li><img src="imagenes/miches.jpg" class="item-image"><span class="item-name">Miches </span> <span class="item-price">$60.00</span></li>
+				<li><img src="imagenes/raspados.jpg" class="item-image"><span class="item-name">Raspados </span> <span class="item-price">$40.00</span></li>
+				<li><img src="imagenes/refresco.jpg" class="item-image"><span class="item-name">Refresco </span> <span class="item-price">$30.00</span></li>
+				<li><img src="imagenes/tazacafe.jpg" class="item-image"><span class="item-name">Taza de Café </span> <span class="item-price">$30.00</span></li>
+            </ul>
+        </section>
+
+        <section id="carnes" class="category">
+            <h2>Carnes</h2>
+            <ul>
+				<li><img src="imagenes/bistecmexicana.jpg" class="item-image"><span class="item-name">Bistec a la mexicana </span> <span class="item-price">$110.00</span></li>
+				<li><img src="imagenes/carneasada.jpg" class="item-image"><span class="item-name">Carne asada </span> <span class="item-price">$155.00</span></li>
+				<li><img src="imagenes/cecinaderes.jpg" class="item-image"><span class="item-name">Cecina de res </span> <span class="item-price">$125.00</span></li>
+				<li><img src="imagenes/charola.jpg" class="item-image"><span class="item-name">Charola </span> <span class="item-price">$400.00</span></li>
+				<li><img src="imagenes/chorizoasado.jpg" class="item-image"><span class="item-name">Chorizo asado </span> <span class="item-price">$135.00</span></li>
+				<li><img src="imagenes/combinada.jpg" class="item-image"><span class="item-name">Combinada </span> <span class="item-price">$190.00</span></li>
+				<li><img src="imagenes/costillita.jpg" class="item-image"><span class="item-name">Costillita </span> <span class="item-price">$135.00</span></li>
+            </ul>
+        </section>
+		<section id="complementos" class="category">
+            <h2>Complementos</h2>
+            <ul>
+				<li><img src="imagenes/ensaladadeverduras.jpg" class="item-image"><span class="item-name">Ensalada de verduras </span> <span class="item-price">$50.00</span></li>
+				<li><img src="imagenes/guacamole.jpg" class="item-image"><span class="item-name">Guacamole </span> <span class="item-price">$75.00</span></li>
+				<li><img src="imagenes/miel.jpg" class="item-image"><span class="item-name">Miel </span> <span class="item-price">$85.00</span></li>
+				<li><img src="imagenes/ordende.jpg" class="item-image"><span class="item-name">Orden de </span> <span class="item-price">$45.00</span></li>
+				<li><img src="imagenes/papasfritas.jpg" class="item-image"><span class="item-name">Papas fritas </span> <span class="item-price">$60.00</span></li>
+				<li><img src="imagenes/platanosfritos.jpg" class="item-image"><span class="item-name">PlaÌtanos fritos </span> <span class="item-price">$60.00</span></li>
+            </ul>
         </section>
     </main>
 
