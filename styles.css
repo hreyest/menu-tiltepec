@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #8ca36e;
     text-align: center;
 }
 
@@ -76,8 +76,8 @@ ul {
 }
 
 li {
-    background-color: #fff;
-    margin: 10px auto;
+    background-color: #c1ddae;
+    margin: 15px auto;
     padding: 15px;
     width: 80%;
     max-width: 600px;
@@ -94,20 +94,41 @@ li:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para las imágenes */
-/* Estilo para imágenes */
+/* Estilos para el contenedor de cada ítem */
+.item-container {
+    position: relative;
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    margin: 10px;
+}
+
+/* Estilos para la imagen */
 .item-image {
-    width: 290px; /* Aumenta el tamaño para mayor prominencia */
-    height: 160px;
-    border-radius: 10px;
-    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Estilos para el overlay (fondo negro con texto) */
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    color: white; /* Letras blancas */
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 8px; /* Opcional: bordes redondeados */
+    border-bottom-right-radius: 8px; /* Opcional: bordes redondeados */
 }
 
 /* Estilos para el nombre del artículo */
 .item-name {
     font-weight: bold;
-    font-size: 18px;
-    color: #333;
+    font-size: 24px;
+    color: #e5ebe0;
     margin-bottom: 5px;
     text-align: center; /* Centra el texto */
 }
@@ -115,8 +136,8 @@ li:hover {
 /* Estilos para el precio del artículo */
 .item-price {
 	font-weight: bold;
-    font-size: 20px;
-    color: #444;
+    font-size: 30px;
+    color: #e5ebe0;
     font-style: italic;
     text-align: center; /* Centra el texto */
 }

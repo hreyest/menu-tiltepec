@@ -10,5 +10,5 @@ function showCategory(categoryId) {
 
 // Mostrar la categoría de entradas por defecto al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    showCategory('antojitos');
+    showCategory('especialidades');
 });
