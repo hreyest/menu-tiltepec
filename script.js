@@ -1,3 +1,9 @@
+		document.querySelectorAll('.menu li').forEach(item => {
+			item.addEventListener('click', () => {
+				item.querySelector('a').click();
+			});
+		});
+
         function toggleMenu() {
             var menu = document.getElementById('menu');
             menu.classList.toggle('active');
