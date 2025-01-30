@@ -7,6 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Tiltepec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav {
+            position: relative;
+        }
+        .menu {
+            display: none;
+            background: #444;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .menu li:hover {
+            background: #555;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .menu-container:hover .menu,
+        .menu-container:focus-within .menu {
+            display: block;
+        }
+        @media (min-width: 600px) {
+            .menu-toggle {
+                display: none;
+            }
+            .menu {
+                display: flex;
+                position: static;
+                background: none;
+            }
+            .menu li {
+                border: none;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
     <header>
         <h1>Menú Tiltepec</h1>
         <nav>
@@ -17,6 +87,21 @@
             <button onclick="showCategory('carnes')">Carnes</button>
             <button onclick="showCategory('complementos')">Complementos</button>
             <button onclick="showCategory('bebidas')">Bebidas</button>
+        </nav>
+    </header>
+    <header>
+        <h1>Menú Tiltepec</h1>
+        <nav class="menu-container">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="#" onclick="showCategory('desayunos'); hideMenu()">Desayunos</a></li>
+                <li><a href="#" onclick="showCategory('especialidades'); hideMenu()">Especialidades</a></li>
+                <li><a href="#" onclick="showCategory('delmar'); hideMenu()">Del Mar</a></li>
+                <li><a href="#" onclick="showCategory('antojitos'); hideMenu()">Antojitos</a></li>
+                <li><a href="#" onclick="showCategory('carnes'); hideMenu()">Carnes</a></li>
+                <li><a href="#" onclick="showCategory('complementos'); hideMenu()">Complementos</a></li>
+                <li><a href="#" onclick="showCategory('bebidas'); hideMenu()">Bebidas</a></li>
+            </ul>
         </nav>
     </header>
 
