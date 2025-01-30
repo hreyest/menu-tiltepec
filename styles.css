@@ -42,11 +42,13 @@ nav {
 #navbar-links {
     display: flex;
     gap: 10px; /* Espacio entre botones */
+	 background-color: #222831; /* Gris oscuro elegante */
+    border-top: 3px solid #76ABAE; /* Línea superior para destacar */
 }
 
 button {
     background-color: #555;
-    color: white;
+    color: #1c66ac ;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -61,11 +63,11 @@ button:hover {
 #menu-toggle {
     display: none;
     background-color: #555;
-    color: white;
+    color: #1c66ac ;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 224px;
 }
 
 /* Estilos para pantallas pequeñas (móviles) */
@@ -89,17 +91,25 @@ button:hover {
     }
 }
 
-/* Estilo para los botones de navegación */
+/* Botones del menú */
 nav button {
-    background-color: #555;
-    color: #fff;
+    background-color: #76ABAE; /* Verde azulado */
+    color: #EEEEEE; /* Blanco suave */
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu li a {
+    color: #100b0b;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
 }
 
 .nav-container {
@@ -141,16 +151,19 @@ ul {
     padding: 0;
 }
 
+
 li {
-    background-color: #c1ddae;
+    color: #160303;
+    background-color: #455937;
     margin: 15px auto;
     padding: 15px;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-	flex-direction: column;
+    display: flex
+;
+    flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -183,7 +196,7 @@ li:hover {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-    color: white; /* Letras blancas */
+    color: #1c66ac ; /* Letras ????? */
     padding: 10px;
     text-align: center;
     border-bottom-left-radius: 8px; /* Opcional: bordes redondeados */
@@ -218,8 +231,21 @@ li:hover {
         font-size: 22px;
     }
 
+{
+    #navbar-links {
+        background-color: #222831;
+        padding: 15px 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    #navbar-links.active {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
     nav button {
-        padding: 8px 15px;
+        width: 90%; /* Ocupar más espacio en móviles */
+        text-align: center;
+		padding: 8px 15px;
         font-size: 12px;
     }
 	
