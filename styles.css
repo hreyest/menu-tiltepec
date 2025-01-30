@@ -38,6 +38,7 @@ nav {
     padding: 10px;
 }
 
+
 #navbar-links {
     display: flex;
     gap: 10px; /* Espacio entre botones */
@@ -100,6 +101,12 @@ nav button {
     font-size: 14px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.nav-container {
+        display: flex;
+        justify-content: center; /* Centra el botón horizontalmente */
+        margin-top: 10px; /* Espaciado opcional */
+    }
 
 nav button:hover {
     background-color: #777;
